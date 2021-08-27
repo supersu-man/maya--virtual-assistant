@@ -1,0 +1,503 @@
+{
+  "intents": {
+    "openBrowser": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "open a browser and take me to "
+            },
+            {
+              "text": "facebook",
+              "entity": "website",
+              "slot_name": "website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "take me to "
+            },
+            {
+              "text": "netflix",
+              "entity": "website",
+              "slot_name": "website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "open "
+            },
+            {
+              "text": "youtube",
+              "entity": "website",
+              "slot_name": "website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "open instagram on "
+            },
+            {
+              "text": "browser",
+              "entity": "website",
+              "slot_name": "website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "go to "
+            },
+            {
+              "text": "github",
+              "entity": "website",
+              "slot_name": "website"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "open "
+            },
+            {
+              "text": "youtube music",
+              "entity": "website",
+              "slot_name": "website"
+            },
+            {
+              "text": " on web"
+            }
+          ]
+        },
+        {
+          "data": []
+        }
+      ]
+    },
+    "defineWord": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "what do you mean by "
+            },
+            {
+              "text": "thread",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is the meaning of "
+            },
+            {
+              "text": "admit",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "define me the word "
+            },
+            {
+              "text": "history",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "tell me the definition of "
+            },
+            {
+              "text": "smart",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what exactly do you mean by the term "
+            },
+            {
+              "text": "confine",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is "
+            },
+            {
+              "text": "torture",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is this term called "
+            },
+            {
+              "text": "applaud",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what the heck is "
+            },
+            {
+              "text": "handicap",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what do you know about "
+            },
+            {
+              "text": "outfit",
+              "entity": "word",
+              "slot_name": "word"
+            }
+          ]
+        }
+      ]
+    },
+    "timetable": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "show me my timetable"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is my timetable"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what is the timetable"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what all classes do i have this week"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "throw the timetable at me"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show my timetable"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "where is my timetable bro ?"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "my timetable"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "my time table"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show my time table"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "time table throw me at"
+            }
+          ]
+        }
+      ]
+    },
+    "upcomingClasses": {
+      "utterances": [
+        {
+          "data": [
+            {
+              "text": "what all classes do i have today"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what are my upcoming classes"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "tell me my upcoming class list"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "do i have classes today"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show my next classes for today"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show my next classes"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what classes are left"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "are classes still there"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "show my class list for today"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "my upcoming classes"
+            }
+          ]
+        },
+        {
+          "data": [
+            {
+              "text": "what lessons do i have now"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "entities": {
+    "website": {
+      "data": [
+        {
+          "value": "facebook",
+          "synonyms": []
+        },
+        {
+          "value": "instagram",
+          "synonyms": []
+        },
+        {
+          "value": "linkedin",
+          "synonyms": []
+        },
+        {
+          "value": "youtube",
+          "synonyms": []
+        },
+        {
+          "value": "youtube music",
+          "synonyms": []
+        },
+        {
+          "value": "twitch",
+          "synonyms": []
+        },
+        {
+          "value": "gitam portal",
+          "synonyms": [
+            "gitam login",
+            "gitam student portal"
+          ]
+        },
+        {
+          "value": "",
+          "synonyms": []
+        }
+      ],
+      "automatically_extensible": true,
+      "use_synonyms": true
+    },
+    "word": {
+      "data": [
+        {
+          "value": "photocopy",
+          "synonyms": [
+            "xerox"
+          ]
+        },
+        {
+          "value": "tongue",
+          "synonyms": []
+        },
+        {
+          "value": "silence",
+          "synonyms": [
+            "quite"
+          ]
+        },
+        {
+          "value": "announcement",
+          "synonyms": [
+            "reveal"
+          ]
+        },
+        {
+          "value": "achievement",
+          "synonyms": [
+            "attainment",
+            "reaching"
+          ]
+        },
+        {
+          "value": "duty",
+          "synonyms": [
+            "responsibility",
+            "liability"
+          ]
+        },
+        {
+          "value": "divorce",
+          "synonyms": [
+            "split up",
+            "separate",
+            "divide"
+          ]
+        },
+        {
+          "value": "board",
+          "synonyms": []
+        },
+        {
+          "value": "conversation",
+          "synonyms": [
+            "chat",
+            "talk",
+            "communication"
+          ]
+        },
+        {
+          "value": "species",
+          "synonyms": []
+        },
+        {
+          "value": "cinema",
+          "synonyms": [
+            "movie"
+          ]
+        },
+        {
+          "value": "pollution",
+          "synonyms": []
+        },
+        {
+          "value": "nationalism",
+          "synonyms": []
+        },
+        {
+          "value": "illusion",
+          "synonyms": [
+            "delusion",
+            "mirage"
+          ]
+        },
+        {
+          "value": "promise",
+          "synonyms": []
+        },
+        {
+          "value": "",
+          "synonyms": []
+        },
+        {
+          "value": "",
+          "synonyms": []
+        }
+      ],
+      "automatically_extensible": true,
+      "use_synonyms": true
+    }
+  },
+  "language": "en"
+}
