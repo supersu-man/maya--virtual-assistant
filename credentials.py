@@ -1,8 +1,8 @@
 glearn = {
-    'username': '221910308056',
+    'username': 'username_here',
     'password': 'password_here'
 }
 moodle = {
-    'username': '221910308056',
+    'username': 'username_here',
     'password': 'password_here'
 }
