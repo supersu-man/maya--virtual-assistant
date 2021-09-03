@@ -101,7 +101,7 @@ def getTimetableToday():
     lst = []
     nextclass = ()
     for i in range(len(weekday)):
-        if not classes[now.weekday()][i] == '':
+        if classes[now.weekday()][i] != '':
             lst.append((convertTo12Hour(weekday[i]), classes[now.weekday()][i]))
             if not weekday[i] == 'WEEKDAY':
                 hour = int(weekday[i].split("to")[0].split(':')[0])
@@ -113,6 +113,7 @@ def getTimetableToday():
                     nextclass = convertTo12Hour(weekday[i+1]), classes[now.weekday()][i+1]
 
     return nextclass,lst[1:]
+
 def convertTo12Hour(text):
     try:
         hour = int(text.split("to")[0].split(':')[0])
