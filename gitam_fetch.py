@@ -8,6 +8,7 @@ s = requests.session()
 def soupify(text):
     soup = BeautifulSoup(text, 'html.parser')
     return soup
+
 def glearnFormData(htmlsource):
     soup = soupify(htmlsource)
     viewstate = soup.find(id="__VIEWSTATE")['value']
@@ -22,6 +23,7 @@ def glearnFormData(htmlsource):
         "Submit": "Login"
     }
     return requestBody
+
 def moodleFormData(htmlsource):
     soup = soupify(htmlsource)
     logintoken = soup.find("input", {"name": "logintoken"})['value']
@@ -31,41 +33,48 @@ def moodleFormData(htmlsource):
         "password": moodle['password']
     }
     return requestBody
+
 def isWrongCredentials(text):
     return "Invalid" in text
+
 def isWrongCredentials2(text):
     return "Invalid login" in text
+
 def isGlearnLoggedIn():
     response1 = requests.get("https://gstudent.gitam.edu/Welcome.aspx").text
     response2 = s.get("https://gstudent.gitam.edu/Welcome.aspx").text
     return not soupify(response1).find('title').text == soupify(response2).find('title').text
+
 def isMoodleLoggedIn():
     response1 = requests.get("https://learn.gitam.edu/calendar/view.php?view=upcoming")
     response2 = s.get("https://learn.gitam.edu/calendar/view.php?view=upcoming")
     return not soupify(response1.text).find('title').text == soupify(response2.text).find('title').text
-
 
 def loginGlearn():
     source = s.get("https://login.gitam.edu/Login.aspx").text
     response = s.post("https://login.gitam.edu/Login.aspx", glearnFormData(source))
     if isWrongCredentials(response.text):
         print("Wrong Credentials")
+
 def loginMoodle():
     response1 = s.get("https://learn.gitam.edu/login/index.php")
     response2 = s.post("https://learn.gitam.edu/login/index.php", moodleFormData(response1.text))
     if isWrongCredentials2(response2.text):
         print("Wrong Credentials.")
+
 def logoutMoodle():
     response = s.get("https://learn.gitam.edu/calendar/view.php?view=upcoming")
     soup = soupify(response.text)
     logoutLink = soup.find('a', {'aria-labelledby': 'actionmenuaction-6'})['href']
     s.get(logoutLink)
+
 def getAttendance():
     if not isGlearnLoggedIn():
         loginGlearn()
     attendanceResponseText = s.get("https://gstudent.gitam.edu/Attendance_new.aspx").text
     attendance = soupify(attendanceResponseText).find(id="MainContent_lbltotal").text
     return attendance
+
 def getTimetable():
     if not isGlearnLoggedIn():
         loginGlearn()
@@ -93,6 +102,7 @@ def getTimetable():
                 eachDay.append(y)
             classes.append(eachDay)
     return timings, classes
+
 def getTimetableToday():
     weekday,classes = getTimetable()
     now = datetime.datetime.now()
@@ -124,6 +134,7 @@ def convertTo12Hour(text):
         return x
     except:
         return text
+
 def getUpcomingActivities():
     if not isMoodleLoggedIn():
         loginMoodle()
@@ -133,11 +144,12 @@ def getUpcomingActivities():
     for i in soup.findAll('div', {'class': 'event m-t-1'}):
         activity = i.find('h3', {'class': 'name d-inline-block'}).text
         time = i.find('div', {'class': 'col-11'}).text
+        link=''
         try:
             link = i.find('div', {'class': 'description-content col-11'}).find('a')['href']
-            tup.append((activity, time, link))
         except:
             pass
+        tup.append((activity, time, link))
     logoutMoodle()
     return tup
 
