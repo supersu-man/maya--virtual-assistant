@@ -6,7 +6,10 @@ from speech import listen
 from linguistics import getIntent
 from actions import actions
 
-porcupine = pvporcupine.create(keywords=["computer", "jarvis","hey-maya"])
+# You can use any of these names as keywords
+# bumblebee, blueberry, porcupine, grasshopper, americano, hey siri, alexa, ok google, hey google, picovoice, pico clock, computer, jarvis, terminator, grapefruit
+
+porcupine = pvporcupine.create(keywords=["computer", "jarvis"])
 pa = pyaudio.PyAudio()
 audio_stream = pa.open(
                 rate=porcupine.sample_rate,
